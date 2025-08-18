@@ -87,9 +87,11 @@
             transform: scale(1.2);
         }
 
+        /* === ИЗМЕНЕНО ЗДЕСЬ === */
         @media (max-width: 600px) {
             #logo-svg {
-                width: 300px;
+                /* Was 300px, now it's 90% of the viewport width */
+                width: 90vw; 
             }
 
             .social-links a {
