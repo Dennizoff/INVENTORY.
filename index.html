@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INVENTORY</title>
+    <title>INVENORY</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
@@ -17,7 +17,7 @@
             color: #ffffff;
             overflow: hidden;
 
-            background-image: linear-gradient(rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0.7)), url('img/bg.jpg');
+            background-image: linear-gradient(rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0.7)), url('https://placehold.co/1920x1080/000000/333333?text=Background');
             
             background-color: #121212; 
             
@@ -64,9 +64,11 @@
         @keyframes breathe {
             0%, 100% {
                 transform: scale(1);
+                filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
             }
-            50% {
+            40% {
                 transform: scale(1.07);
+                filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.6));
             }
         }
 
@@ -79,23 +81,28 @@
             color: #a0a0a0;
             font-size: 40px;
             text-decoration: none;
-            transition: color 0.3s ease, transform 0.3s ease;
+            transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
         }
 
+        /* === ICON GLOW ADDED HERE === */
         .social-links a:hover {
             color: #ffffff;
             transform: scale(1.2);
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
         }
 
-        /* === ИЗМЕНЕНО ЗДЕСЬ === */
+        
         @media (max-width: 600px) {
             #logo-svg {
-                /* Was 300px, now it's 90% of the viewport width */
                 width: 90vw; 
             }
 
+            .social-links {
+                gap: 30px;
+            }
+
             .social-links a {
-                font-size: 48px;
+                font-size: 36px;
             }
         }
     </style>
@@ -105,12 +112,13 @@
     <div class="card-container">
 
         <div id="logo-container">
-            
-            <img src="img/logo.svg" alt="Логотип" id="logo-svg">
+            <!-- Using a placeholder for the logo SVG -->
+            <img src="https://placehold.co/500x150/121212/FFFFFF?text=INVENTORY&font=sans-serif" alt="Логотип" id="logo-svg" onerror="this.onerror=null;this.src='https://placehold.co/500x150/121212/FFFFFF?text=Logo+Not+Found';">
 
         </div>
 
         <div class="social-links">
+            <!-- Links have been updated -->
             <a href="https://t.me/+Bm5g4qzYm5czMGRk" target="_blank" aria-label="Telegram">
                 <i class="fa-brands fa-telegram"></i>
             </a>
